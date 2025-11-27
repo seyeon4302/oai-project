@@ -10,7 +10,7 @@ The installation and usage instructions summarize the official OAI tutorials whi
 
 ---
 
-### 📦 Installation
+## 📦 Installation
 
 Minimum hardware requirements:
 - Laptop/Desktop/Server for OAI CN5G and OAI gNB
@@ -18,7 +18,7 @@ Minimum hardware requirements:
     - CPU: 8 cores x86_64 @ 3.5 GHz
     - RAM: 32 GB
     - 
-## 1. Install & Set Up OAI CN5G  
+### 1. Install & Set Up OAI CN5G  
 The OAI 5G Core is deployed using Docker Compose.
 
 **Key steps include:**
@@ -28,12 +28,12 @@ The OAI 5G Core is deployed using Docker Compose.
   (AMF, SMF, UPF, NRF, AUSF, MongoDB, WebUI)
 
 
-## 1.1 Clone this repo:
+### 1.1 Clone this repo:
 ```cd ~
 git clone https://github.com/seyeon4302/oai-project.git
 
 ```
-## 1.2 OAI CN5G pre-requisites
+### 1.2 OAI CN5G pre-requisites
 
 ```bash
 sudo apt install -y git net-tools putty
@@ -53,15 +53,15 @@ sudo usermod -a -G docker $(whoami)
 reboot
 ```
 
-## 1.3 Pull OAI CN5G docker images
+### 1.3 Pull OAI CN5G docker images
 
 ```bash
 cd ~/oai-project/oai-cn5g
 docker compose pull
 ```
 
-## This repository follows the official directory and compose structure.
-## Reference: [OAI CN5G Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md
+This repository follows the official directory and compose structure.
+Reference: [OAI CN5G Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md
 ---
 
 ## 2. Install & Build OAI gNB and OAI nrUE  
@@ -69,7 +69,7 @@ docker compose pull
 
 Both gNB and nrUE are built from the `openairinterface5g` source.
 
-## 2.1 OAI gNB and OAI nrUE pre-requisites
+### 2.1 OAI gNB and OAI nrUE pre-requisites
 
 ### Build UHD from source
 ```bash
@@ -90,7 +90,7 @@ sudo ldconfig
 sudo uhd_images_downloader
 ```
 
-## 2.2 Build OAI gNB and OAI nrUE
+### 2.2 Build OAI gNB and OAI nrUE
 
 ```bash
 # Get openairinterface5g source code
@@ -111,14 +111,14 @@ cd ~/oai-project/openairinterface5g/cmake_targets
 
 
 
-### 🚀 Usage Scenarios
+## 🚀 Usage Scenarios
 
-## 1. Run OAI CN5G (Terminal 1)
+### 1. Run OAI CN5G (Terminal 1)
 ```cd ~/oai-project/oai-cn5g
 docker compose up -d
 ```
 
-## 2. Run OAI gNB (Terminal 2)
+### 2. Run OAI gNB (Terminal 2)
 ```cd ~/oai-project/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-softmodem \
     -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf \
@@ -126,7 +126,7 @@ sudo ./nr-softmodem \
     --rfsim
 ```
 
-## 3. Run OAI nrUE (Terminal 3)
+### 3. Run OAI nrUE (Terminal 3)
 ```cd ~/oai-project/openairinterface5g/cmake_targets/ran_build/build
 sudo ./nr-uesoftmodem \
     -r 106 \
@@ -140,4 +140,4 @@ sudo ./nr-uesoftmodem \
     --rfsimulator.IQfile /tmp/rfsim1.iqs
 ```
 
-## Reference: [OAI gNB/nrUE Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md
+Reference: [OAI gNB/nrUE Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md
