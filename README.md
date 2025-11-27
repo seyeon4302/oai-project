@@ -38,3 +38,38 @@ Both gNB and nrUE are built from the `openairinterface5g` source.
 ```bash
 cd openairinterface5g/cmake_targets
 ./build_oai -c -w USRP
+
+
+## 🚀 Usage Scenarios
+
+### 1. Run OAI CN5G
+cd oai-project/oai-cn5g
+docker compose up -d
+
+### 2. Run OAI gNB
+cd oai-project/openairinterface5g/cmake_targets/ran_build/build
+sudo ./nr-softmodem \
+    -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf \
+    --gNBs.[0].min_rxtxtime 6 \
+    --rfsim
+
+### 3. Run OAI nrUE
+cd oai-project/openairinterface5g/cmake_targets/ran_build/build
+sudo ./nr-uesoftmodem \
+    -r 106 \
+    --numerology 1 \
+    --band 78 \
+    -C 3619200000 \
+    --uicc0.imsi 001010000000001 \
+    --rfsim \
+    --rfsimulator.serveraddr 127.0.0.1 \
+    --rfsimulator.serverport 4043 \
+    --rfsimulator.IQfile /tmp/rfsim1.iqs
+
+
+
+## 📄 References
+
+[OAI CN5G Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md
+
+[OAI gNB/nrUE Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md
