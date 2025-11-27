@@ -1,0 +1,20 @@
+mcc: "001"
+mnc: "01"
+tac: 1
+
+gnb_id: 0x000002
+nci:    0x0000002
+
+amf_ip_address: "192.168.70.132"
+gtp_ip_address: "192.168.70.134"
+
+nr_band: 78
+ssbSubcarrierSpacing: 30
+downlink_frequency: 3510000000
+uplink_frequency:   3510000000
+nrrb: 106
+
+gnb_n2_bind_addr: "192.168.70.142"
+gnb_n3_bind_addr: "192.168.70.142"
+
+rf_sim: 1

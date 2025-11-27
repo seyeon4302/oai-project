@@ -1,0 +1,9 @@
+upf:
+  pfcp: { addr: "192.168.70.134" }
+  gtp:  { addr: "192.168.70.134" }
+  dnn_list:
+    - dnn: "internet"
+      dev: "upfgtp"
+      cidr: "12.1.1.0/24"
+  access: { ifname: "eth0" }
+  core:   { ifname: "eth0" }

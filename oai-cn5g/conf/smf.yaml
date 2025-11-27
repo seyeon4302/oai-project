@@ -1,0 +1,9 @@
+smf:
+  sbi: { addr: 0.0.0.0, port: 80 }
+  nrf: { uri: "http://oai-nrf:80" }
+  pfcp: [ { addr: "192.168.70.133" } ]       # SMF 자신 IP
+  upf_list: [ { pfcp: { addr: "192.168.70.134" } } ]  # UPF IP
+  dnn_list:
+    - dnn: "internet"
+      ipv4_pool: [ "12.1.1.0/24" ]
+      mtu: 1500

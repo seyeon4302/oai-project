@@ -1,0 +1,21 @@
+mcc: "001"
+mnc: "01"
+tac: 1
+
+gnb_id: 0x000001
+nci:    0x0000001
+
+amf_ip_address: "192.168.70.132"   # N2
+gtp_ip_address: "192.168.70.134"   # N3
+
+nr_band: 78
+ssbSubcarrierSpacing: 30
+downlink_frequency: 3510000000
+uplink_frequency:   3510000000
+nrrb: 106
+
+gnb_n2_bind_addr: "192.168.70.141"
+gnb_n3_bind_addr: "192.168.70.141"
+
+rf_sim: 1
+# rf_dev_args: ...   # 실 RF 쓰면 설정
