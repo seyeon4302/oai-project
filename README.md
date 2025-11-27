@@ -60,8 +60,8 @@ cd ~/oai-project/oai-cn5g
 docker compose pull
 ```
 
-This repository follows the official directory and compose structure.
-Reference: [OAI CN5G Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md
+### This repository follows the official directory and compose structure.
+### Reference: [OAI CN5G Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_CN5G.md
 ---
 
 ### 2. Install & Build OAI gNB and OAI nrUE  
@@ -140,4 +140,4 @@ sudo ./nr-uesoftmodem \
     --rfsimulator.IQfile /tmp/rfsim1.iqs
 ```
 
-Reference: [OAI gNB/nrUE Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md
+### Reference: [OAI gNB/nrUE Tutorial] https://github.com/OPENAIRINTERFACE/openairinterface5g/blob/develop/doc/NR_SA_Tutorial_OAI_nrUE.md
